@@ -1,0 +1,19 @@
+ssh cheatsheet
+
+Check if you are connected to remote:
+
+ssh -T git@bitbucket.yourcompany.com
+
+Check if hostname matches, you'll need a ~/.ssh/config entry as such:
+
+Host bitbucket.yourcompany.com
+    HostName bitbucket.yourcompany.com
+    User git
+    IdentityFile ~/.ssh/id_rsa
+
+To check if set to origin:
+
+git remote -v
+
+git remote set-url origin git@bitbucket.yourcompany.com:your_team/your_repo.git
+
